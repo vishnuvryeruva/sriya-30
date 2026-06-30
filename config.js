@@ -16,16 +16,16 @@ window.SITE_CONFIG = {
   // Add or remove as many as you like.
   quotes: [
     {
-      text: "Thirty looks effortless on you — the way grace always does.",
+      text: "Thirty years of grace, grit, and a heart that never learned how to give anything less than everything.",
+      attribution: "",
+    },
+    {
+      text: "She has a way of turning ordinary days into the ones you never want to forget.",
+      attribution: "",
+    },
+    {
+      text: "This is her era — confident, golden, and only just getting started.",
       attribution: "With all our love",
-    },
-    {
-      text: "Here's to the laughter we've shared, the memories we've made, and all the chapters still to come.",
-      attribution: "",
-    },
-    {
-      text: "You don't just turn a year older — you turn a little more into the wonderful person you were always meant to be.",
-      attribution: "",
     },
   ],
 
@@ -50,13 +50,16 @@ window.SITE_CONFIG = {
     youtubeId: "inZiMx4uMec",        // the part after watch?v=  (youtu.be/inZiMx4uMec)
     mp4Src: "video/montage.mp4",     // drop your file in /video as montage.mp4
     poster: "",                      // optional poster image for mp4
-    heading: "A Little Montage",
-    subheading: "Press play and turn the volume up.",
+    heading: "A Few Words for You",
+    subheading: "From the people who love you most.",
   },
 
   // ---- CLOSING -------------------------------------------------
   closing: {
+    // A heartfelt tribute paragraph shown above the final birthday line.
+    tribute:
+      "Every mile she's traveled was for the people she loves. Every sacrifice, every sleepless night, every loan paid off — it was never about her, it was always about us. Today, we celebrate the woman who gave everything and asked for nothing. Here's to the year the people she loves get to give some of it back.",
     message: "Happy Birthday, Sriya",
-    signature: "— Made with love",
+    signature: "— With all our love",
   },
 };

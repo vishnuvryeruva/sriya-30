@@ -311,6 +311,27 @@ img { display: block; max-width: 100%; }
   padding: clamp(5rem, 14vw, 9rem) 1.5rem 4rem;
   background: radial-gradient(120% 100% at 50% 100%, var(--cream-deep), var(--cream));
 }
+.closing__tribute {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  max-width: 40ch;
+  margin: 0 auto;
+}
+.closing__tribute:empty { display: none; }
+
+/* little gold ornament between the tribute and the birthday line */
+.closing__ornament {
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin: 2.6rem auto;
+  border: 1px solid var(--gold);
+  transform: rotate(45deg);
+}
+
 .closing__message {
   font-family: "Parisienne", cursive;
   font-size: clamp(2.4rem, 8vw, 4.5rem);
