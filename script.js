@@ -87,6 +87,9 @@
       video.controls = true;
       video.playsInline = true;
       if (v.poster) video.poster = v.poster;
+      // If the file isn't uploaded yet, hide the section instead of
+      // showing a broken player.
+      video.addEventListener("error", () => { videoSection.hidden = true; });
       videoFrame.appendChild(video);
       videoSection.hidden = false;
     }

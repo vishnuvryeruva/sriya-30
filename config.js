@@ -46,9 +46,9 @@ window.SITE_CONFIG = {
   //   "mp4"     -> set mp4Src to a file path (e.g. "video/montage.mp4")
   //   "none"    -> hide the video section entirely
   video: {
-    mode: "none",                    // "youtube" | "mp4" | "none"
+    mode: "mp4",                     // "youtube" | "mp4" | "none"
     youtubeId: "",                   // the part after watch?v=
-    mp4Src: "video/montage.mp4",
+    mp4Src: "video/montage.mp4",     // drop your file in /video as montage.mp4
     poster: "",                      // optional poster image for mp4
     heading: "A Little Montage",
     subheading: "Press play and turn the volume up.",
