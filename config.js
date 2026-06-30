@@ -47,7 +47,7 @@ window.SITE_CONFIG = {
   //   "none"    -> hide the video section entirely
   video: {
     mode: "youtube",                 // "youtube" | "mp4" | "none"
-    youtubeId: "inZiMx4uMec",        // the part after watch?v=  (youtu.be/inZiMx4uMec)
+    youtubeId: "j1UZ2VuVGwQ",        // the part after watch?v=  (youtu.be/j1UZ2VuVGwQ)
     mp4Src: "video/montage.mp4",     // drop your file in /video as montage.mp4
     poster: "",                      // optional poster image for mp4
     heading: "A Few Words for You",
