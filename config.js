@@ -6,10 +6,10 @@
 
 window.SITE_CONFIG = {
   // ---- HERO ----------------------------------------------------
-  name: "This Is Her Era.",          // the big headline
+  eyebrow: "Happy 30th Birthday",    // script flourish above the name
+  name: "Sriya",                     // the big centerpiece
   milestone: "Celebrating 30 Years of Glamour & Adventure",  // subheadline
   date: "June 30, 2026",             // small line below
-  eyebrow: "",                       // (no script line above the title)
   headline: "",                      // (unused)
 
   // ---- PULL QUOTES (elegant text sections) ---------------------
