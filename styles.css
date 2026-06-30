@@ -109,31 +109,33 @@ img { display: block; max-width: 100%; }
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.3rem, 4vw, 2rem);
+  font-size: clamp(1.15rem, 3.4vw, 1.7rem);
   color: var(--taupe);
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-top: 0.8rem;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+  max-width: 26ch;
+  margin-inline: auto;
 }
 
-/* divider rule under milestone */
+/* divider rule under the subheadline */
 .hero__milestone::after {
   content: "";
   display: block;
   width: 60px;
   height: 1px;
   background: var(--gold-soft);
-  margin: 1.4rem auto 0;
+  margin: 1.6rem auto 0;
 }
 
-.hero__headline {
-  font-family: "Cormorant Garamond", serif;
-  font-style: italic;
-  font-size: clamp(1.1rem, 2.6vw, 1.5rem);
-  color: var(--ink-soft);
-  margin-top: 1.6rem;
-  max-width: 30ch;
-  margin-inline: auto;
+/* small date line */
+.hero__date {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 1.4rem;
 }
 
 /* scroll cue */
