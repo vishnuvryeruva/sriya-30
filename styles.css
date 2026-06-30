@@ -1,0 +1,361 @@
+/* ============================================================
+   Palette & tokens
+   ============================================================ */
+:root {
+  --cream:      #faf6f1;
+  --cream-deep: #f3ebe1;
+  --blush:      #ecd9d0;
+  --taupe:      #8a7a6d;
+  --ink:        #3d342e;
+  --ink-soft:   #6b5d52;
+  --gold:       #b8975a;
+  --gold-soft:  #d8c39a;
+  --white:      #fffdfb;
+
+  --maxw: 1100px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ============================================================
+   Reset / base
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  text-align: center;
+  color: var(--ink);
+  letter-spacing: 0.5px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  font-style: italic;
+}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background:
+    radial-gradient(120% 80% at 50% 0%, var(--white) 0%, var(--cream) 45%, var(--cream-deep) 100%);
+  overflow: hidden;
+}
+
+/* soft decorative glow */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -20% 30% auto;
+  height: 60vh;
+  background: radial-gradient(closest-side, rgba(216, 195, 154, 0.35), transparent);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  animation: rise 1.2s var(--ease) both;
+}
+
+.hero__eyebrow {
+  font-family: "Parisienne", cursive;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: var(--gold);
+  margin-bottom: 0.4rem;
+}
+
+.hero__name {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: clamp(3.8rem, 14vw, 8.5rem);
+  line-height: 0.95;
+  letter-spacing: 1px;
+  color: var(--ink);
+}
+
+.hero__milestone {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  color: var(--taupe);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 0.8rem;
+}
+
+/* divider rule under milestone */
+.hero__milestone::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: var(--gold-soft);
+  margin: 1.4rem auto 0;
+}
+
+.hero__headline {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.6vw, 1.5rem);
+  color: var(--ink-soft);
+  margin-top: 1.6rem;
+  max-width: 30ch;
+  margin-inline: auto;
+}
+
+/* scroll cue */
+.scroll-cue {
+  position: absolute;
+  bottom: 2.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--taupe);
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeIn 2s var(--ease) both 0.8s;
+}
+.scroll-cue__arrow {
+  width: 1px;
+  height: 38px;
+  background: linear-gradient(var(--gold) 40%, transparent);
+  position: relative;
+}
+.scroll-cue__arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 50%;
+  width: 7px; height: 7px;
+  border-right: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  transform: translateX(-50%) rotate(45deg);
+  animation: bob 1.8s ease-in-out infinite;
+}
+
+/* ============================================================
+   Pull quotes
+   ============================================================ */
+.quote-block {
+  max-width: 760px;
+  margin-inline: auto;
+  padding: clamp(4rem, 12vw, 8rem) 1.5rem;
+  text-align: center;
+}
+
+.quote-block__text {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 4.5vw, 2.6rem);
+  line-height: 1.4;
+  color: var(--ink);
+  position: relative;
+}
+
+/* decorative quotation mark */
+.quote-block__text::before {
+  content: "\201C";
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4em;
+  line-height: 0;
+  color: var(--gold-soft);
+  display: block;
+  margin-bottom: -0.2em;
+}
+
+.quote-block__attr {
+  margin-top: 1.8rem;
+  font-size: 0.78rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+.quote-block__attr:empty { display: none; }
+
+/* ============================================================
+   Gallery
+   ============================================================ */
+.gallery {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: clamp(2rem, 6vw, 4rem) 1.5rem;
+}
+
+.gallery .section-title { margin-bottom: 2.5rem; }
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  background: var(--cream-deep);
+  aspect-ratio: 4 / 5;
+  box-shadow: 0 10px 30px -18px rgba(61, 52, 46, 0.5);
+}
+
+/* let occasional photos span larger for a curated feel */
+.gallery__item:nth-child(5n + 1) { aspect-ratio: 4 / 3; }
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s var(--ease);
+}
+.gallery__item:hover img { transform: scale(1.06); }
+
+.gallery__caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1.4rem 1rem 0.9rem;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--white);
+  background: linear-gradient(transparent, rgba(40, 32, 27, 0.65));
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+.gallery__item:hover .gallery__caption { opacity: 1; transform: translateY(0); }
+
+/* placeholder shimmer when no image yet */
+.gallery__item--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--taupe);
+  font-style: italic;
+  font-family: "Cormorant Garamond", serif;
+  border: 1px dashed var(--gold-soft);
+}
+
+/* ============================================================
+   Video
+   ============================================================ */
+.video {
+  max-width: 920px;
+  margin-inline: auto;
+  padding: clamp(2rem, 6vw, 4rem) 1.5rem;
+}
+.video .section-title { margin-bottom: 0.3rem; }
+
+.video__frame {
+  margin-top: 2.5rem;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 20px 50px -24px rgba(61, 52, 46, 0.7);
+}
+.video__frame iframe,
+.video__frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ============================================================
+   Closing
+   ============================================================ */
+.closing {
+  text-align: center;
+  padding: clamp(5rem, 14vw, 9rem) 1.5rem 4rem;
+  background: radial-gradient(120% 100% at 50% 100%, var(--cream-deep), var(--cream));
+}
+.closing__message {
+  font-family: "Parisienne", cursive;
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  color: var(--gold);
+  line-height: 1.2;
+}
+.closing__signature {
+  margin-top: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  color: var(--taupe);
+  font-size: 1.1rem;
+}
+.closing__back {
+  display: inline-block;
+  margin-top: 2.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold-soft);
+  padding-bottom: 2px;
+}
+
+/* ============================================================
+   Scroll-reveal animation
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1s var(--ease), transform 1s var(--ease);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) rotate(45deg) translateY(0); opacity: 1; }
+  50%      { transform: translateX(-50%) rotate(45deg) translateY(4px); opacity: 0.4; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}

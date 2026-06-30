@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 30th Birthday, Sriya</title>
+  <meta name="description" content="A keepsake page celebrating Sriya's 30th birthday." />
+
+  <!-- Open Graph (nice preview when the link is shared) -->
+  <meta property="og:title" content="Happy 30th Birthday, Sriya" />
+  <meta property="og:description" content="A celebration of thirty beautiful years." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Cormorant Garamond (serif), Parisienne (script), Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&family=Parisienne&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="top">
+    <div class="hero__inner">
+      <p class="hero__eyebrow" data-config="eyebrow">Happy 30th Birthday</p>
+      <h1 class="hero__name" data-config="name">Sriya</h1>
+      <p class="hero__milestone" data-config="milestone">Thirty Years</p>
+      <p class="hero__headline" data-config="headline"></p>
+    </div>
+
+    <a href="#story" class="scroll-cue" aria-label="Scroll to see more">
+      <span>Scroll to see more</span>
+      <span class="scroll-cue__arrow" aria-hidden="true"></span>
+    </a>
+  </header>
+
+  <main>
+    <!-- ===================== FIRST QUOTE ===================== -->
+    <section class="quote-block" id="story" data-quote="0"></section>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section class="gallery" id="gallery">
+      <h2 class="section-title">Moments</h2>
+      <div class="gallery__grid" id="gallery-grid"></div>
+    </section>
+
+    <!-- ===================== SECOND QUOTE ===================== -->
+    <section class="quote-block" data-quote="1"></section>
+
+    <!-- ===================== VIDEO ===================== -->
+    <section class="video" id="video" hidden>
+      <h2 class="section-title" data-config="video.heading">A Little Montage</h2>
+      <p class="section-subtitle" data-config="video.subheading"></p>
+      <div class="video__frame" id="video-frame"></div>
+    </section>
+
+    <!-- ===================== THIRD QUOTE ===================== -->
+    <section class="quote-block" data-quote="2"></section>
+  </main>
+
+  <!-- ===================== CLOSING ===================== -->
+  <footer class="closing" id="closing">
+    <p class="closing__message" data-config="closing.message">Happy Birthday, Sriya</p>
+    <p class="closing__signature" data-config="closing.signature"></p>
+    <a href="#top" class="closing__back">Back to top ↑</a>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="photos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
